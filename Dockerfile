@@ -9,7 +9,7 @@ COPY script.js /usr/share/nginx/html/
 EXPOSE 80
 
 # Use a non-root user for security
-USER nginx
+#USER nginx
 
 # Start the Nginx server
 CMD ["nginx", "-g", "daemon off;"]
