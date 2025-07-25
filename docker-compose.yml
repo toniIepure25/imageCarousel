@@ -6,3 +6,15 @@ services:
     labels:
     - com.yourdomain.project.id=68839d42d6da35c8b5c2553d
     - com.yourdomain.project.name=imageCarousel
+    - com.yourdomain.project.id=68839dded6da35c8b5c2553e
+  process_exporter:
+    command: -procnames node
+    depends_on:
+    - app
+    expose:
+    - '9256'
+    image: ncabatoff/process-exporter
+    labels:
+    - com.yourdomain.project.id=68839dded6da35c8b5c2553e
+    - com.yourdomain.project.name=imageCarousel
+    restart: unless-stopped
